@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    
+    text-align: center;
+}
+
+body{
+    overflow-y:auto ;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#add-task-button{
+    padding: 10px;
+}
+
+ul{
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+
+}
+li{
+    width: 230px;
+    padding: 8px;
+}
+
+#input-task{
+    font-size: 20px;
+    padding: 8px;
+    margin: 3px;
+    border: none;
+    /* border: 0px 0px 0px 0px; */
+    border-bottom: 2px solid orange;
+    
+    
+}
+.delete-btn{
+    padding: 5px;
+    /*align-items: center;*/
+    align-content:center;
+    float: right;
+}
+ul li:nth-child(odd){
+background-color: rgb(199, 199, 194);
+}
+ul li:nth-child(even){
+    background-color: rgb(245, 247, 246);
+}
+
+.task{
+    padding-left: 5px;
+}
+
+
+input[type=checkbox]:checked + span {
+    text-decoration: line-through;
+}
