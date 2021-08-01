@@ -21,7 +21,7 @@ body{
     align-items: center;
 }
 #add-task-button{
-    
+    justify-content: flex-end;
     padding: 10px;
     border: none;
     color: white;
@@ -49,9 +49,9 @@ ul{
 
 }
 label{
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+    display: flex;
+    
+    width: inherit;
     margin: 5px;
 }
 li{
@@ -80,7 +80,7 @@ li{
 }
 
 .container{
-    /*min-width: 90%;*/
+    min-width: 90%;
     display: flex;
     flex-direction: column;
     padding: 30px;
