@@ -12,10 +12,14 @@ for(let i=0;i<arr.length;i++){
 
 add_btn.addEventListener("click",function (){
     let val=input_task.value;
-    createLi(val);
-    arr.push(val);
-    localStorage.setItem("tasks", JSON.stringify(arr));
-    console.log("New task added: " + val );
+    if(val==""){
+        alert("Please Enter Valid Input");
+    }else{
+        createLi(val);
+        arr.push(val);
+        localStorage.setItem("tasks", JSON.stringify(arr));
+        console.log("New task added: " + val );
+    }
 })
 
 
@@ -31,8 +35,8 @@ function createLi(task){
     span.setAttribute("class","task");
     inp.setAttribute("type","checkbox");
     btn.setAttribute("class","delete-btn");
-    btn.appendChild(document.createTextNode("X"));
-    //btn.appendChild(document.createTextNode("X"));
+    btn.setAttribute("src","url(/assests/delete.png)")
+    btn.appendChild(document.createTextNode("Delete"));
     li.appendChild(inp);
     li.appendChild(span);
     //li.appendChild(txtNode);
