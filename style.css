@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'STIX Two Text', serif;
 }
 h1{
     
@@ -19,6 +22,9 @@ body{
 }
 #add-task-button{
     padding: 10px;
+    border: none;
+    color: white;
+    background-color: crimson;
 }
 
 ul{
@@ -26,42 +32,67 @@ ul{
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: space-around;
+    align-content: space-around;
 
 }
+label{
+    margin: 2px;
+}
 li{
-    width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
     padding: 8px;
+    margin: 2px;
+    min-width: inherit;
+    
 }
 
 #input-task{
     font-size: 20px;
     padding: 8px;
-    margin: 3px;
+    margin-right: 4px;
+    margin-bottom: 0;
+    margin-left: 0;
     border: none;
     border-bottom: 2px solid orange;
-    
+    outline: none;
     
 }
+
+.container{
+    border: 2px solid black;
+}
+
 .delete-btn{
     padding: 5px;
     /*align-items: center;*/
-    align-content:center;
-    float: right;
+ 
 }
+
 ul li:nth-child(odd){
-background-color: rgb(199, 199, 194);
+background-color: rgb(246, 243, 250);
 }
 ul li:nth-child(even){
-    background-color: rgb(245, 247, 246);
+    background-color: rgb(99, 198, 228);
 }
 
 .task{
     padding-left: 5px;
+    flex-grow: 4;
 }
 
 
 input[type=checkbox]:checked + span {
     text-decoration: line-through;
+}
+input{
+ /*top: 50%;*/
+    
+}
+ul li:hover{
+    background-color: rgb(241, 225, 213);
+    /*background-image: linear-gradient(rgb(224, 192, 192),rgb(113, 112, 133));*/
 }
